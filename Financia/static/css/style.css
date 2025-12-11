@@ -1,3 +1,117 @@
-.navbar-nav {
+body {
+    background: #F5F5F5;
+}
+
+
+.container-fluid {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.logo {
+    margin-right: 2rem;
+}
+
+.navbar {
+    background-color: #F5F5F5;
+}
+
+.collapse {
     justify-content: end !important;
+
+}
+
+.nav-link {
+    color: #333 !important;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+
+.rounded-circle {
+    background-color: #0384C5;
+}
+
+/*Main*/
+/*HEADER + BOTÕES*/
+.botoes a {
+    background: #0384C5;
+}
+
+/* CARDS SUPERIORES  */
+
+.card-custom {
+    border-radius: 18px;
+
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    padding-bottom: 0.10rem;
+}
+
+.bg-primary {
+    background-color: #0288d1 !important;
+
+}
+
+
+/*Saldo atual*/
+.carteira {
+    display: flex;
+}
+
+.saldo_atual {
+    background: #0384C5;
+    border-radius: 20px;
+
+}
+
+/*RECEITAS*/
+.receitas {
+
+    border-radius: 20px;
+}
+
+.receitas h3 {
+    color: #10B780;
+}
+
+/* GRÁFICOS */
+
+
+/* EVOLUÇÃO MENSAL */
+.evolucao {
+    background: white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    min-height: 400px;
+}
+
+.despesas_categoria {
+    background: white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    min-height: 400px;
+}
+
+/* DEPESAS POR CATEGORIA */
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* TRANSAÇÕES RECENTES */
+
+
+.transacao-icone {
+    flex-shrink: 0 !important;
+    width: auto !important;
+    height: auto !important;
+
+}
+
+.list-group-item {
+    border-bottom: 1px solid #e5e7eb !important;
+    /* cinza clarinho */
 }
