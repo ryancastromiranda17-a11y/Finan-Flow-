@@ -70,9 +70,14 @@
             <h3 class="fw-bold">Dashboard</h3>
 
             <div class="botoes">
-                <a href="#" class="btn btn-primary me-2 px-4">+ Nova
-                    Categoria</a>
-                <a href="#" class="btn btn-primary px-4">+ Nova Transação</a>
+                <button class="btn btn-primary px-4" id="btnNovaCategoria" data-bs-toggle="modal"
+                    data-bs-target="#modalCategoria">
+                    + Nova Categoria
+                </button>
+
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTransacao">
+                    + Nova Transação
+                </button>
             </div>
         </div>
 
@@ -245,10 +250,98 @@
 
     </main>
 
+    <div class="modal fade" id="modalTransacao" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3 rounded-4">
+
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Nova Transação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Botões Receita / Despesa -->
+                    <div class="d-flex justify-content-between mb-3">
+                        <button class="btn btn-tipo w-50 me-2" id="btnReceita">Receita</button>
+                        <button class="btn btn-tipo w-50" id="btnDespesa">Despesa</button>
+                    </div>
+
+                    <!-- Formulário -->
+                    <div class="mb-3">
+                        <label class="fw-semibold">Descrição</label>
+                        <input type="text" class="form-control" placeholder="Ex: Academia">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="fw-semibold">Valor</label>
+                        <input type="text" class="form-control" placeholder="0,00">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="fw-semibold">Categoria</label>
+                        <select class="form-select">
+                            <option selected>Escolha uma categoria</option>
+                            <option>Alimentação</option>
+                            <option>Moradia</option>
+                            <option>Transporte</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="fw-semibold">Data</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                </div>
+
+                <div class="modal-footer border-0">
+                    <button id="btnSubmit" class="btn  btn-submit-receita btn-danger w-100 py-2 fw-semibold">
+                        Adicionar nova despesa
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Nova Categoria -->
+    <div class="modal fade" id="modalCategoria" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold">Nova Categoria</h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <label class="fw-semibold mb-1">Nome</label>
+                    <input type="text" class="form-control mb-3" placeholder="Ex: Alimentação">
+
+                    <label class="fw-semibold mb-1">Logo</label>
+                    <select class="form-select mb-4">
+                        <option selected>Escolha uma logo</option>
+                        <option>Casa</option>
+                        <option>Comida</option>
+                        <option>Carro</option>
+                    </select>
+
+                    <button class="btn btn-primary w-100 py-2 fw-semibold rounded-3">
+                        Adicionar categoria
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="{% static 'js/script.js' %}"></script>
 
 

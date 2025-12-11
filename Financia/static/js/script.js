@@ -79,3 +79,46 @@ new Chart(ctx2, {
     }
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btnReceita = document.getElementById("btnReceita");
+    const btnDespesa = document.getElementById("btnDespesa");
+    const btnSubmit = document.getElementById("btnSubmit");
+
+    btnReceita.addEventListener("click", function () {
+        btnReceita.classList.add("btn-receita-active");
+        btnDespesa.classList.remove("btn-despesa-active");
+
+        btnSubmit.classList.add("btn-receita-active");
+        btnSubmit.classList.remove("btn-despesa-active");
+
+        btnSubmit.textContent = "Adicionar nova receita";
+    });
+
+    btnDespesa.addEventListener("click", function () {
+        btnDespesa.classList.add("btn-despesa-active");
+        btnReceita.classList.remove("btn-receita-active");
+
+        btnSubmit.classList.add("btn-despesa-active");
+        btnSubmit.classList.remove("btn-receita-active");
+
+        btnSubmit.textContent = "Adicionar nova despesa";
+    });
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const btnNovaCategoria = document.getElementById("btnNovaCategoria");
+
+    btnNovaCategoria.addEventListener("click", function () {
+        const modal = new bootstrap.Modal(document.getElementById("modalCategoria"));
+        modal.show();
+    });
+
+});
+

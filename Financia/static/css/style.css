@@ -115,3 +115,55 @@ body {
     border-bottom: 1px solid #e5e7eb !important;
     /* cinza clarinho */
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Botões de seleção */
+
+.btn-tipo {
+    background-color: #333232 !important;
+    color: white !important;
+}
+
+.btn-receita-active {
+    background-color: #10B780 !important;
+    color: white !important;
+}
+
+.btn-despesa-active {
+    background-color: #e63946 !important;
+    color: white !important;
+}
+
+
+
+
+/* Fundo escuro + blur */
+.modal-backdrop.show {
+    opacity: 0.25 !important;
+    backdrop-filter: blur(6px);
+}
+
+/* Modal */
+#modalCategoria .modal-content {
+    border-radius: 14px;
+    padding: 20px 25px;
+}
+
+/* Botão azul igual ao modelo */
+#modalCategoria .btn-primary {
+    background-color: #0A76D9;
+    border: none;
+}
+
+#modalCategoria .btn-primary:hover {
+    background-color: #0869bf;
+}
