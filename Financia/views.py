@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def finanflow(request):
-    return render(request, 'finan/list.html')
+    return render(request, 'finan/dashboard.html')

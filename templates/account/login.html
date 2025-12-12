@@ -1,0 +1,48 @@
+{% load socialaccount %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Entrar no Finan Flow {% endblock %}
+
+{% block content %}
+
+<div class="login-container">
+
+    <h2>Entrar na sua conta</h2>
+
+    <form method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+
+        {{ form.non_field_errors }}
+
+        <div class="form-group">
+            {{ form.login.label_tag }}
+            {{ form.login }}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+        </div>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+    </form>
+
+    <!-- ADICIONADO -->
+    <p style="margin-top: 10px;">
+        Não tem conta?
+        <a href="{% url 'account_signup' %}">Registrar</a>
+    </p>
+    <!-- FIM -->
+
+    <div class="divider">
+        <span>Ou continue com</span>
+    </div>
+
+    <a href="{% provider_login_url 'google' process='login' %}">
+        <img src="/static/img/google.png" width="60">
+    </a>
+
+</div>
+
+{% endblock %}
