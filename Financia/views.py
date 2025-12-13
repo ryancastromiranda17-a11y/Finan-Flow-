@@ -21,3 +21,7 @@ def despesas(request):
 @login_required
 def categorias(request):
     return render(request, 'finan/categorias.html')
+
+
+def login(request):
+    return render(request, 'account/login.html')
