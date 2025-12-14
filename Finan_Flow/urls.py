@@ -26,7 +26,6 @@ urlpatterns = [
     path('receitas/', views.receitas, name='receitas'),
     path('despesas/', views.despesas, name='despesas'),
     path('categorias/', views.categorias, name='categorias'),
-    path('login/', views.login, name='login'),
     path('dashboard/', finanflow, name='dashboard'),
 
 ]

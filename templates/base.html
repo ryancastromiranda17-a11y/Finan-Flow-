@@ -22,7 +22,7 @@
                 <a class="navbar-brand d-flex align-items-center" href="{% url 'dashboard' %}">
                     <img src="{% static 'img/logo.png' %}" alt="Logo" style=" height:105px; margin-right:-40px;">
                     <div class="title d-flex flex-column lh-1 ">
-                        <span class="fw-semibold " style="font-size:32px;">FinanFlow</span>
+                        <span class="fw-semibold text-entrada " style="font-size:32px;">FinanFlow</span>
                         <span class="text-muted" style="font-size:15px;">Gestão Financeira Pessoal</span>
                     </div>
                 </a>
@@ -62,7 +62,7 @@
                                     class="rounded-circle" style="width:55px; height:55px; object-fit: cover;">
                             </div>
 
-                            <span class="ms-2 fw-semibold" style="font-size:18px; color:#333;">
+                            <span class="ms-2 fw-semibold text-entrada" style="font-size:18px; color:#333;">
                                 {{ user.first_name|default:user.username }}
                             </span>
 
@@ -86,7 +86,8 @@
                                 <hr class="dropdown-divider">
                             </li>
 
-                            <li><a class="dropdown-item text-danger fw-semibold" href="{% url 'login' %}">Sair</a></li>
+                            <li><a class="dropdown-item text-danger fw-semibold"
+                                    href="{% url 'account_login' %}">Sair</a></li>
                         </ul>
                     </div>
 

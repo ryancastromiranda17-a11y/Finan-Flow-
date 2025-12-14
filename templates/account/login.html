@@ -24,11 +24,11 @@
                 <a href="{% url 'account_signup' %}">Registrar</a>
 
             </div>
-
+            <p class="subtitle">Controle suas finanças de forma simples</p>
         </div>
 
         <div class="login">
-            <img src="{% static 'img/logo.png' %}" width="70">
+            <img src="{% static 'img/logo.png' %}" width="300">
             <h2>Entrar na sua conta</h2>
 
             <form method="POST" action="{% url 'account_login' %}">
@@ -52,21 +52,19 @@
                 </div>
 
                 <button type="submit" class="entrar">Entrar</button>
-            </form>
-
-            <!-- ADICIONADO -->
-
-            <!-- FIM -->
-
-            <div class="divider">
-                <span>Ou continue com</span>
-            </div>
-
-            <a href="{% provider_login_url 'google' %}" class="btn btn-outline-dark botao-google-link">
-                <img src="{% static 'img/google.png' %}" width="18" class=botao-google">
-                <span class="texto-google">Entrar com Google</span>
-            </a>
+                <div class="continue-google">
+                    <span class="divider-text">Ou continue com</span>
+                    <a href="{% provider_login_url 'google' %}" class="btn btn-outline-dark botao-google-link">
+                        <img src="{% static 'img/google.png' %}" width="18" class=botao-google">
+                        <span class="texto-google">Entrar com Google</span>
+                    </a>
+                </div>
         </div>
+        </form>
+
+
+
+
 
     </div>
 </div>
