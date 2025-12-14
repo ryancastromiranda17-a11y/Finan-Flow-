@@ -78,8 +78,7 @@ body.dark-mode .navbar {
     color: white;
 }
 
-.dark-mode strong,
-.dark-mode span {
+.dark-mode strong {
     color: #fff !important;
 }
 
@@ -408,11 +407,7 @@ body.dark-mode .navbar {
 }
 
 
-.dark-mode img,
-.dark-mode p,
-.dark-mode h5 {
-    color: white;
-}
+
 
 
 
@@ -423,13 +418,10 @@ body.dark-mode .navbar {
 
 
 
+
 /* TELA DESPESAS */
 
-.dark-mode .despesas,
-.dark-mode p,
-.dark-mode h5 {
-    color: white;
-}
+
 
 
 
@@ -541,10 +533,27 @@ form input {
 }
 
 
-.dark-mode span {
-    color: white;
-}
+
 
 .dark-mode .card-categorias {
     border: 0px;
+}
+
+
+.valor-receita {
+    color: #16a34a;
+    font-weight: 700;
+}
+
+.valor-despesa {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+body.dark-mode .valor-receita {
+    color: #4ade80;
+}
+
+body.dark-mode .valor-despesa {
+    color: #f87171;
 }
