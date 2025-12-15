@@ -139,13 +139,8 @@ body.dark-mode .navbar {
     content: url("/static/img/trash-2-white.png");
 }
 
-.botoes-dashboard {
-    background-color: #11a1e9;
-}
 
-.botoes-dashboard:hover {
-    background-color: #11a1e9;
-}
+
 
 /* CARDS SUPERIORES  */
 
@@ -158,6 +153,7 @@ body.dark-mode .navbar {
 
 .bg-primary {
     background-color: #0288d1 !important;
+
 
 }
 
@@ -229,6 +225,7 @@ body.dark-mode .navbar {
 
 
 /* TRANSAÇÕES RECENTES */
+
 
 
 .transacao-icone {
