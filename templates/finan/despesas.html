@@ -35,7 +35,7 @@
     {% for despesa in transacoes %}
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div class="d-flex align-items-center">
-            <img src="{% static 'img/shopping-bag.png' %}" width="32" class="me-3">
+            <img src="{% static 'img/trending-down.png' %}" width="32" class="me-3">
             <div>
                 <strong>{{ despesa.descricao }}</strong><br>
                 <small class="text-muted">{{ despesa.categoria.nome }} • {{ despesa.data|date:"d M" }}</small>

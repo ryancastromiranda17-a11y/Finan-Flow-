@@ -42,7 +42,7 @@
     {% for receita in transacoes %}
     <div class="d-flex justify-content-between align-items-center mb-3">
         <div class="d-flex align-items-center">
-            <img src="{% static 'img/laptop.png' %}" width="32" class="me-3">
+            <img src="{% static 'img/trending-up.png' %}" width="32" class="me-3">
             <div>
                 <strong>{{ receita.descricao }}</strong><br>
                 <small class="text-muted">{{ receita.categoria.nome }} • {{ receita.data|date:"d M" }}</small>

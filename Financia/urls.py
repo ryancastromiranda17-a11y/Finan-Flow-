@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    
+    path("transacao/nova/", views.transacao_escolha, name="transacao_escolha"),
 
     # dashboard
     # raiz redireciona para dashboard

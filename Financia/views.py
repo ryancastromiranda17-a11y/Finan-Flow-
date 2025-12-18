@@ -21,6 +21,11 @@ def home_redirect(request):
     return redirect('dashboard')
 
 
+def transacao_escolha(request):
+    next_url = request.GET.get("next", "/dashboard/")
+    return render(request, "finan/transacao_escolha.html", {"next": next_url})
+
+
 # Dashboard view
 @login_required
 def finanflow(request):
@@ -125,6 +130,7 @@ def receitas(request):
         'categoria_form': categoria_form,
     })
 
+@login_required
 def receita_create(request):
     if request.method == 'POST':
         form = ReceitaForm(request.POST)
@@ -141,6 +147,8 @@ def receita_create(request):
         'next_url': next_url,
         'titulo': 'Nova Receita'
     })
+
+
 
 def receita_update(request, id):
     receita = get_object_or_404(Receita, id=id)
