@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         {% for transacao in transacoes %}
-        <tr>
+        <tr class="nome-categoria">
             <td>{{ transacao.data }}</td>
             <td>{{ transacao.descricao }}</td>
             <td>{{ transacao.categoria.nome }}</td>

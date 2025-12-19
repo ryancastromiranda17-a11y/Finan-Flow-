@@ -8,16 +8,14 @@
     <h3 class="fw-bold">Dashboard</h3>
     <div class="botoes">
         <!-- Botão Nova Categoria -->
-        <a href="{% url 'categoria_create' %}?next={{ request.path }}" 
-           class="btn bg-primary botoes-dashboard px-4">
+        <a href="{% url 'categoria_create' %}?next={{ request.path }}" class="btn bg-primary botoes-dashboard px-4">
             + Nova Categoria
         </a>
 
         <!-- Botão Nova Transação -->
-        <a href="{% url 'transacao_escolha' %}?next={{ request.path }}"
-   class="btn bg-primary botoes-dashboard">
-    + Nova Transação
-</a>
+        <a href="{% url 'transacao_escolha' %}?next={{ request.path }}" class="btn bg-primary botoes-dashboard">
+            + Nova Transação
+        </a>
     </div>
 </div>
 
@@ -44,7 +42,7 @@
                     <img src="{% static 'img/trending-up.png' %}" width="26" class="me-2" alt="">
                     <span class="fw-semibold texto-receita">Receitas</span>
                 </div>
-                <h3 class="fw-bold mb-0">R$ {{ total_receitas|floatformat:2 }}</h3>
+                <h3 class="valor-receita fw-bold mb-0">R$ {{ total_receitas|floatformat:2 }}</h3>
                 <p>Este mês</p>
             </a>
         </div>
@@ -118,22 +116,19 @@
 
     <div class="list-group">
         {% for t in transacoes_recentes %}
-            <div class="d-flex align-items-center justify-content-between gap-3 mb-2">
-                <div class="d-flex align-items-center gap-3">
-                    <img src="{% static 'img/wallet-black-symbol.png' %}" 
-                        width="36" 
-                        height="36"
-                        class="rounded-3"
-                        alt="Transação">
-                    <strong>{{ t.descricao }}</strong><br>
-                    <small class="text-muted">{{ t.categoria.nome }} • {{ t.data|date:"d M" }}</small>
-                </div>
-                <h5 class="fw-bold {% if t.tipo == 'despesa' %}text-danger{% else %}text-success{% endif %} mb-0">
-                    R$ {{ t.valor|floatformat:2 }}
-                </h5>
+        <div class="d-flex align-items-center justify-content-between gap-3 mb-2">
+            <div class="d-flex align-items-center gap-3">
+                <img src="{% static 'img/wallet-black-symbol.png' %}" width="36" height="36" class="rounded-3"
+                    alt="Transação">
+                <strong>{{ t.descricao }}</strong><br>
+                <small class="text-muted">{{ t.categoria.nome }} • {{ t.data|date:"d M" }}</small>
             </div>
+            <h5 class="fw-bold {% if t.tipo == 'despesa' %}text-danger{% else %}text-success{% endif %} mb-0">
+                R$ {{ t.valor|floatformat:2 }}
+            </h5>
+        </div>
         {% empty %}
-            <p>Nenhuma transação recente.</p>
+        <p>Nenhuma transação recente.</p>
         {% endfor %}
     </div>
 </div>

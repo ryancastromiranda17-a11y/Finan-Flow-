@@ -4,16 +4,14 @@
 {% block content %}
 <div class="container mt-5 text-center">
 
-    <h4 class="fw-bold mb-4">Qual tipo de transação?</h4>
+    <h4 class="nome-categoria fw-bold mb-4">Qual tipo de transação?</h4>
 
     <div class="d-flex justify-content-center gap-4">
-        <a href="{% url 'receita_create' %}?next={{ request.GET.next }}"
-           class="btn btn-success px-4 py-2">
+        <a href="{% url 'receita_create' %}?next={{ request.GET.next }}" class="btn btn-success px-4 py-2">
             + Receita
         </a>
 
-        <a href="{% url 'despesa_create' %}?next={{ request.GET.next }}"
-           class="btn btn-danger px-4 py-2">
+        <a href="{% url 'despesa_create' %}?next={{ request.GET.next }}" class="btn btn-danger px-4 py-2">
             + Despesa
         </a>
     </div>
